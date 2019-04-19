@@ -55,13 +55,14 @@ const Excerpt = styled.p`
 `
 
 const Price = styled.div`
-  margin: 0 1rem 1rem 1rem;
   line-height: 1.6;
   background-color: #4CAF50;
   text-align: center;
   width: 70px;
   color: #FFF;
   position: absolute;
+  left: 5px;
+  top: 10px;
 `
 
 const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
