@@ -58,7 +58,7 @@ const Footer = () => (
         </a>
       </Item>
       <Item>
-        <a>a parkbroom site</a>
+        <a>A danny site</a>
       </Item>
     </List>
   </Wrapper>
