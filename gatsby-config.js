@@ -32,6 +32,21 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `@wapps/gatsby-plugin-fonts`,
+      options: {
+        googleFonts: {
+          families: [
+            'Cute Font',
+            'Roboto:400,500,500i',
+            'Open Sans',
+          ],
+          subsets: [
+            'greek',
+          ]
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: config.siteUrl,

@@ -37,6 +37,8 @@ const Nav = styled.nav`
     &:hover {
       color: white;
     }
+    font-family: Cute Font;
+    font-size: 48px;
   }
 `
 
@@ -51,17 +53,7 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about/" activeStyle={activeLinkStyle}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact/" activeStyle={activeLinkStyle}>
-              Contact
+              WoofBuy
             </Link>
           </li>
         </ul>
