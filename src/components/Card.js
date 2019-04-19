@@ -54,6 +54,16 @@ const Excerpt = styled.p`
   line-height: 1.6;
 `
 
+const Price = styled.div`
+  margin: 0 1rem 1rem 1rem;
+  line-height: 1.6;
+  background-color: #4CAF50;
+  text-align: center;
+  width: 70px;
+  color: #FFF;
+  position: absolute;
+`
+
 const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
   return (
     <Post featured={props.featured}>
@@ -65,6 +75,7 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
             __html: body.childMarkdownRemark.excerpt,
           }}
         />
+        <Price>$50</Price>
       </Link>
     </Post>
   )
