@@ -11,6 +11,7 @@ import config from '../utils/siteConfig'
 
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
+  console.log(posts)
   const featuredPost = posts[0].node
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
@@ -36,11 +37,12 @@ const Index = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query($skip: Int!, $limit: Int!, $slug: String!) {
     allContentfulPost(
       sort: { fields: [publishDate], order: DESC }
       limit: $limit
       skip: $skip
+      filter: {tags: { elemMatch: {slug: {eq: $slug}}}}
     ) {
       edges {
         node {

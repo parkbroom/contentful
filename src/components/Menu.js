@@ -46,13 +46,8 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
+            <Link to="/avengers" activeStyle={activeLinkStyle}>
               Avengers
-            </Link>
-          </li>
-          <li>  
-            <Link to="/" activeStyle={activeLinkStyle}>
-              DC
             </Link>
           </li>
         </ul>

@@ -36,6 +36,20 @@ exports.createPages = ({ graphql, actions }) => {
           skip: 0,
           numPages: numPages + 1,
           currentPage: 1,
+          slug: "all"
+        },
+      })
+
+      // Create main home page
+      createPage({
+        path: `/avengers`,
+        component: path.resolve(`./src/templates/index.js`),
+        context: {
+          limit: postsPerFirstPage,
+          skip: 0,
+          numPages: numPages + 1,
+          currentPage: 1,
+          slug: "avengers"
         },
       })
 
