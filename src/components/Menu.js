@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Header = styled.header`
   //background: ${props => props.theme.colors.base};
   width: 100%;
-  padding: 1.5em 0;
+  background: aliceblue;
 `
 const Nav = styled.nav`
   width: 100%;
@@ -15,35 +15,24 @@ const Nav = styled.nav`
 
   ul {
     display: flex;
-    justify-content: space-between;
   }
 
   li {
     display: inline-block;
     margin-left: 1em;
-    &:first-child {
-      position: relative;
-      margin: 0;
-      flex-basis: 100%;
-    }
   }
 
   a {
     text-decoration: none;
     color: DarkGray;
-    font-weight: 600;
+    font-weight: 100;
     transition: all 0.2s;
-    // border-bottom: 2px solid ${props => props.theme.colors.base};
-    // &:hover {
-    //   color: white;
-    // }
-    font-family: Cute Font;
-    font-size: 48px;
+    font: 12px Arial;
   }
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  color: 'black',
 }
 
 const Menu = () => {
@@ -53,7 +42,17 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
-              WoofBuy
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/" activeStyle={activeLinkStyle}>
+              Avengers
+            </Link>
+          </li>
+          <li>  
+            <Link to="/" activeStyle={activeLinkStyle}>
+              DC
             </Link>
           </li>
         </ul>
